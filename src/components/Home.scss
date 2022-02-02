@@ -1,0 +1,161 @@
+@import '../_var';
+
+.mainContainer {
+    height:100vh;
+    width:100%;
+}
+
+.vr {
+    display:none;
+}
+
+#map { 
+    height: 70vh;
+    box-sizing:border-box
+ }
+
+.leaflet-container {
+    height:70vh;
+    box-sizing:border-box;
+}
+
+.subContainer {
+    background-image:url(../images/pattern-bg.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    position:relative;
+    height:30vh;
+    z-index:500;
+    .card {
+        margin-top:1rem;
+        background-color:white;
+        flex-direction:column;
+        border-radius:18px;
+        width:80%;
+        box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.38);
+        -webkit-box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.38);
+        -moz-box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.38);
+        div {
+            display:flex;
+            flex-direction:column;
+        }
+    }
+}
+.input-container {
+    height:68vh;
+    width:100%;
+    flex-direction:column;
+    position:absolute;
+    top:0;
+    margin-top:1rem;
+    input {
+        border-radius: 18px;
+        padding: 1rem;
+        width: 100%;
+        border: none;
+        font-family:$font;
+        cursor:pointer;
+    }
+    .inputDiv {
+        width:80%;
+        margin-top: 1rem;
+        position:relative;
+        button {
+            position:absolute;
+            z-index:5;
+            top:0;
+            right:0;
+            height:100%;
+            width:20%;
+            background-color: black;
+            border-top-right-radius: 18px;
+            border-bottom-right-radius: 18px;
+            border: none;
+        }
+        button:active {
+            background-color:$vDarkGrey;
+        }
+        .icon {
+            color:white;
+        }
+
+    }
+}
+
+.title {
+    color:white;
+    font-weight:400;
+    font-family:$font;
+    font-size:1.5rem;
+}
+
+.subtitle {
+    color:$darkGrey;
+    text-transform: uppercase;
+    font-size:0.7rem;
+    font-family:$font;
+    font-weight:600;
+    text-align:center;
+}
+
+.blackTitle {
+    color:$vDarkGrey;
+    font-size:1.5rem;
+    font-family:$font;
+    text-align:center;
+    font-weight:500;
+}
+
+@media only screen and (min-width: 900px){
+    .card {
+        flex-direction:row !important;
+        padding:2.5rem 2.5rem;
+        justify-content:space-between !important;
+        .subtitle, .blackTitle {
+            text-align:left;
+        }
+        div {
+            display:flex;
+            flex-direction:column;
+        }
+    }
+    .input-container {
+        height:45vh;
+        .inputDiv{
+            width:50%;
+            margin-bottom:2rem;
+            button {
+                width:9%;
+            }
+        }
+        input {
+            padding:1.3rem 1rem;
+        }
+    }
+    .title {
+        font-size:2rem;
+    }
+    .subtitle {
+        margin-bottom:0.5rem !important;
+    }
+    .subContainer {
+        height:35vh;
+    }
+    .leaflet-container {
+        height:65vh;
+    }
+    #map {
+        height:65vh;
+    }
+
+    .borderLeft {
+        margin-left:1rem;
+    }
+
+    .vr {
+        display:block;
+        border-left: 1px solid grey;
+        height: 100%;
+    }
+
+}
